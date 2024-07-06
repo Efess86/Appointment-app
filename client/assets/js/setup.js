@@ -13,14 +13,13 @@ const adminSettings = {
 		{ day: 'Воскресенье', isWorking: false }
 	],
 	holidays: [
-		{ date: '2024-01-01', name: 'Новый год' },
-		{ date: '2024-01-07', name: 'Рождество' },
-		{ date: '2024-02-23', name: 'День защитника Отечества' },
-		{ date: '2024-03-08', name: 'Международный женский день' },
-		{ date: '2024-05-01', name: 'Праздник Весны и Труда' },
-		{ date: '2024-05-09', name: 'День Победы' },
-		{ date: '2024-06-12', name: 'День России' },
-		{ date: '2024-11-04', name: 'День народного единства' }
+		{ date: '2024-01-01', name: 'New Year' },
+		{ date: '2024-01-07', name: 'Chrismas' },
+		{ date: '2024-02-23', name: 'Defender day' },
+		{ date: '2024-03-08', name: "Woman's day 8 March" },
+		{ date: '2024-05-01', name: 'Labor day' },
+		{ date: '2024-05-09', name: 'End of 2nd World War' },
+		{ date: '2024-12-03', name: 'Holyday' },
 	]
 };
 

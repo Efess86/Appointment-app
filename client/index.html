@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./assets/styles/main.css">
 	<script src="./assets/js/main.js" defer type="module"></script>
 	<title>Appointment</title>
 </head>
@@ -11,6 +12,20 @@
 <body>
 
 	<div id="app"></div>
+
+	<div class="appointment_container">
+		<div class="appointment_date">
+			<button id="prevDay" class="prevDay">&#8678</button>
+			<input type="date" id="currentDate">
+			<button id="nextDay" class="nextDay">&#x21E8</button>
+		</div>
+		<div class="appointment_slots">
+			<button>
+				10:30
+				&#43
+			</button>
+		</div>
+	</div>
 
 </body>
 
