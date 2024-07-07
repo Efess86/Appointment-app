@@ -27,6 +27,8 @@ $border-radius: 5px;
 
 
 	.appointment_date {
+		display: flex;
+		gap: 5px;
 		margin: 0px auto;
 
 		input {
@@ -36,10 +38,11 @@ $border-radius: 5px;
 			background-color: #fff;
 			border: none;
 			color: #000;
+			height: 40px;
+			padding: 0 0 0 10px;
 		}
 
-		.prevDay,
-		.nextDay {
+		.changeDayBtn {
 			box-sizing: border-box;
 			background-color: $main-color;
 			border: 1px solid $border-color;
@@ -49,7 +52,14 @@ $border-radius: 5px;
 			border: none;
 			cursor: pointer;
 			transition: .3s ease;
+			width: 30px;
 		}
+	}
+
+	.appointment_day {
+		color: #000000;
+		text-transform: uppercase;
+		text-align: center;
 	}
 
 	.appointment_slots {
@@ -66,8 +76,8 @@ $border-radius: 5px;
 		align-items: center;
 		gap: 5px;
 		padding: 2px;
-		width: 75px;
-		height: 75px;
+		width: 65px;
+		height: 65px;
 		border-radius: $border-radius;
 		cursor: pointer;
 		background-color: #fff;

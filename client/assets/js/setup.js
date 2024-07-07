@@ -1,6 +1,6 @@
 
 const adminSettings = {
-	workDayStart: '10:00',
+	workDayStart: '09:00',
 	workDayEnd: '18:00',
 	appointmentSlotSize: 30, // в минутах
 	workDays: [
@@ -20,6 +20,7 @@ const adminSettings = {
 		{ date: '2024-05-01', name: 'Labor day' },
 		{ date: '2024-05-09', name: 'End of 2nd World War' },
 		{ date: '2024-12-03', name: 'Holyday' },
+		{ date: '2024-07-09', name: 'Birthday' },
 	]
 };
 

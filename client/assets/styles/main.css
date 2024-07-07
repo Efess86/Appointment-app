@@ -14,6 +14,8 @@
   gap: 25px;
 }
 .appointment_container .appointment_date {
+  display: flex;
+  gap: 5px;
   margin: 0px auto;
 }
 .appointment_container .appointment_date input {
@@ -23,9 +25,10 @@
   background-color: #fff;
   border: none;
   color: #000;
+  height: 40px;
+  padding: 0 0 0 10px;
 }
-.appointment_container .appointment_date .prevDay,
-.appointment_container .appointment_date .nextDay {
+.appointment_container .appointment_date .changeDayBtn {
   box-sizing: border-box;
   background-color: #9bdaff;
   border: 1px solid #838383;
@@ -35,6 +38,12 @@
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
+  width: 30px;
+}
+.appointment_container .appointment_day {
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
 }
 .appointment_container .appointment_slots {
   display: flex;
@@ -49,8 +58,8 @@
   align-items: center;
   gap: 5px;
   padding: 2px;
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   border-radius: 5px;
   cursor: pointer;
   background-color: #fff;
