@@ -1,8 +1,97 @@
+@import './normalize.css';
+
+$font-family: Arial;
+$font-size: 18px;
 $main-color: #9bdaff;
 $second-color: #eeeeee;
+$border-color: #838383;
+$anavalible-color: #bdbdbd;
 $border-radius: 5px;
 
+.container {
+	padding: 15px;
+}
+
+
 .appointment_container {
-	background-color: $second-color;
+	font-family: $font-family;
+	font-size: $font-size;
+	background-color: $main-color;
 	border-radius: $border-radius;
+
+	padding: 25px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+
+
+	.appointment_date {
+		margin: 0px auto;
+
+		input {
+			background-color: $main-color;
+			border: 1px solid $border-color;
+			border-radius: $border-radius;
+			background-color: #fff;
+			border: none;
+			color: #000;
+		}
+
+		.prevDay,
+		.nextDay {
+			box-sizing: border-box;
+			background-color: $main-color;
+			border: 1px solid $border-color;
+			border-radius: $border-radius;
+			background-color: #fff;
+			color: #000;
+			border: none;
+			cursor: pointer;
+			transition: .3s ease;
+		}
+	}
+
+	.appointment_slots {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	.appointment_slots-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		padding: 2px;
+		width: 75px;
+		height: 75px;
+		border-radius: $border-radius;
+		cursor: pointer;
+		background-color: #fff;
+		color: #000;
+
+		transition: .3s ease;
+
+		&:hover {
+			box-shadow: 0px 2px 4px 0 #000000;
+			transform: scale(1.1);
+		}
+	}
+
+	.appointment_slots-item__anavalible {
+		cursor: default;
+
+		box-shadow: none;
+		transform: scale(1);
+		color: #dddddd;
+
+
+		&:hover {
+			box-shadow: none;
+			transform: scale(1);
+		}
+	}
 }
