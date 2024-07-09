@@ -24,4 +24,4 @@ const adminSettings = {
 	]
 };
 
-export { adminSettings };
+module.exports = { adminSettings };

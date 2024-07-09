@@ -91,17 +91,22 @@ $border-radius: 5px;
 		}
 	}
 
-	.appointment_slots-item__anavalible {
+
+	.appointment_slots-item__unavailable {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		padding: 2px;
+		width: 65px;
+		height: 65px;
+		border-radius: $border-radius;
 		cursor: default;
+		background-color: $anavalible-color;
+		color: #ffffff;
 
-		box-shadow: none;
-		transform: scale(1);
-		color: #dddddd;
-
-
-		&:hover {
-			box-shadow: none;
-			transform: scale(1);
-		}
+		transition: .3s ease;
 	}
+
 }

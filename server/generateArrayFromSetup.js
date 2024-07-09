@@ -1,5 +1,4 @@
-// generateAppointmentData.js
-import { adminSettings } from './setup.js';
+const { adminSettings } = require('./setup.js');
 
 function generateAppointmentData() {
 	let currentDate = new Date();
@@ -63,4 +62,4 @@ function getDayName(dayIndex) {
 	return days[dayIndex];
 }
 
-export { generateAppointmentData };
+module.exports = { generateAppointmentData };

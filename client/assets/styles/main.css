@@ -70,13 +70,18 @@
   box-shadow: 0px 2px 4px 0 #000000;
   transform: scale(1.1);
 }
-.appointment_container .appointment_slots-item__anavalible {
+.appointment_container .appointment_slots-item__unavailable {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 2px;
+  width: 65px;
+  height: 65px;
+  border-radius: 5px;
   cursor: default;
-  box-shadow: none;
-  transform: scale(1);
-  color: #dddddd;
-}
-.appointment_container .appointment_slots-item__anavalible:hover {
-  box-shadow: none;
-  transform: scale(1);
+  background-color: #bdbdbd;
+  color: #ffffff;
+  transition: 0.3s ease;
 }/*# sourceMappingURL=main.css.map */
