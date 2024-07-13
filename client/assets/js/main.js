@@ -27,7 +27,7 @@ async function bookAppointment(date, time) {
 		}
 		return await response.json();
 	} catch (error) {
-		console.error('Error booking appointment:', error);
+		console.error('Error booking appointment: ', error);
 		return null;
 	}
 }

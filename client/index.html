@@ -5,8 +5,40 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./assets/styles/main.css">
-	<script src="./assets/js/main.js" defer type="module"></script>
+	<!-- <script src="./assets/js/main.js" defer type="module"></script> -->
 	<title>Appointment</title>
+
+	<style>
+		.appointment_booking {
+			max-width: 400px;
+			margin: 0 auto;
+			font-family: Arial, sans-serif;
+		}
+
+		.required::after {
+			content: " *";
+			color: red;
+		}
+
+		input:invalid,
+		input:required:invalid {
+			border-color: red;
+		}
+
+		input:valid {
+			border-color: green;
+		}
+
+		.error-message {
+			color: red;
+			font-size: 0.8em;
+			display: none;
+		}
+
+		#submitBtn {
+			margin-top: 10px;
+		}
+	</style>
 </head>
 
 <body>
@@ -14,6 +46,87 @@
 	<div class="container">
 		<div id="app"></div>
 	</div>
+
+	<div class="appointment_booking">
+		<div class="appointment_booking__personal-data">
+			<div class="personal-data__name">
+				<label for="nameInput" class="required">Name:</label>
+				<input type="text" id="nameInput" required>
+				<div class="error-message" id="nameError">Please enter your name</div>
+			</div>
+			<div class="personal-data__phone">
+				<label for="phoneInput" class="required">Phone: </label>
+				<input type="tel" id="phoneInput" name="phone" placeholder="69X XXX XXXX"
+					pattern="(69\d{1}\s\d{3}\s\d{4})|(2\d{3}\s\d{6})" required>
+				<div class="error-message" id="phoneError">Please enter a valid phone number</div>
+			</div>
+			<div class="message-input">
+				<label for="messageInput">Message (optional):</label>
+				<textarea id="messageInput" name="message" placeholder="Type your message here..."></textarea>
+				<div class="char-count">0 / 500</div>
+			</div>
+		</div>
+		<div class="appointment_booking__button">
+			<input type="checkbox" id="agreeTerms" required>
+			<label for="agreeTerms" class="required">I have read and agree to the terms and conditions of use</label>
+			<div class="error-message" id="agreeError">You must agree to the terms</div>
+			<button id="submitBtn" disabled>Book an appointment</button>
+		</div>
+	</div>
+
+	<script>
+		const nameInput = document.getElementById('nameInput');
+		const phoneInput = document.getElementById('phoneInput');
+		const messageInput = document.getElementById('messageInput');
+		const charCount = document.querySelector('.char-count');
+		const agreeCheckbox = document.getElementById('agreeTerms');
+		const submitButton = document.getElementById('submitBtn');
+		const maxLength = 500;
+
+		const nameError = document.getElementById('nameError');
+		const phoneError = document.getElementById('phoneError');
+		const agreeError = document.getElementById('agreeError');
+
+		function validatePhone(phone) {
+			const phonePattern = /^(69\d{1}\s\d{3}\s\d{4})|(2\d{3}\s\d{6})$/;
+			return phonePattern.test(phone);
+		}
+
+		function checkFormValidity() {
+			const isNameValid = nameInput.value.trim() !== '';
+			const isPhoneValid = validatePhone(phoneInput.value);
+			const isAgreed = agreeCheckbox.checked;
+
+			nameError.style.display = isNameValid ? 'none' : 'block';
+			phoneError.style.display = isPhoneValid ? 'none' : 'block';
+			agreeError.style.display = isAgreed ? 'none' : 'block';
+
+			submitButton.disabled = !(isNameValid && isPhoneValid && isAgreed);
+		}
+
+		messageInput.addEventListener('input', function () {
+			const remainingChars = maxLength - this.value.length;
+			charCount.textContent = `${this.value.length} / ${maxLength}`;
+
+			if (remainingChars < 0) {
+				this.value = this.value.slice(0, maxLength);
+				charCount.textContent = `${maxLength} / ${maxLength}`;
+			}
+		});
+
+		nameInput.addEventListener('input', checkFormValidity);
+		phoneInput.addEventListener('input', checkFormValidity);
+		agreeCheckbox.addEventListener('change', checkFormValidity);
+
+		phoneInput.addEventListener('input', function (e) {
+			let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+			e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '');
+			checkFormValidity();
+		});
+
+		// Initial check
+		checkFormValidity();
+	</script>
 
 </body>
 
