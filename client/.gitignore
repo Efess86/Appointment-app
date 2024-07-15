@@ -1,53 +1,53 @@
-# Системные файлы
+# System files
 .DS_Store
 Thumbs.db
 
-# Файлы среды разработки
+# Develop files
 .idea/
 .vscode/
 *.sublime-project
 *.sublime-workspace
 
-# Зависимости
+# Dependencies
 /node_modules
 /vendor
 
-# Файлы сборки
+# Build files
 /dist
 /build
 
-# Логи
+# Logs files
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Файлы окружения
+# Environment files
 .env
 .env.local
 .env.*.local
 
-# Кеш
+# Cache files
 .cache/
 
-# Временные файлы
+# Tetemporary files
 *.tmp
 *.swp
 *.swo
 
-# Файлы базы данных
+# DB files
 *.sqlite
 
-# Резервные копии
+# Reservation files
 *.bak
 
-# Файлы конфигурации, содержащие секретные данные
+# Config files with private data
 config.json
 
-# Папки для загруженных файлов
+# Uploaded files
 /uploads
 
-# Файлы компиляции
+# Compiled files
 *.com
 *.class
 *.dll
@@ -55,7 +55,7 @@ config.json
 *.o
 *.so
 
-# Архивы
+# Archive
 *.7z
 *.dmg
 *.gz
@@ -65,5 +65,5 @@ config.json
 *.tar
 *.zip
 
-# Файлы coverage отчетов
+# Coverage log files
 /coverage
