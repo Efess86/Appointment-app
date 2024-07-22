@@ -1,5 +1,19 @@
 const { adminSettings } = require('./setup.js');
 
+// translate your days of week here and then you need to regenerate array callng generate-slots from backend
+// if you use "Open Server Panel" go to advanced -> console and run curl http://localhost:3000/generate-slots 
+// *** Warning *** all data will be erased and generated again.
+const days = [
+	'Monday',
+	'Tuesday',
+	'Wednesday',
+	'Thursday',
+	'Friday',
+	'Saturday',
+	'Sunday'
+];
+
+
 function generateAppointmentData() {
 	let currentDate = new Date();
 	// Find the nearest Monday
@@ -58,7 +72,6 @@ function formatTime(date) {
 }
 
 function getDayName(dayIndex) {
-	const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 	return days[dayIndex];
 }
 

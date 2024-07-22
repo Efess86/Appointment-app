@@ -11,14 +11,14 @@ export async function fetchSlots(date) {
 	}
 }
 
-export async function bookAppointment(date, time) {
+export async function bookAppointment(date, time, customerInfo) {
 	try {
 		const response = await fetch('http://localhost:3000/book-appointment', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify({ date, time }),
+			body: JSON.stringify({ date, time, customerInfo }),
 		});
 		if (!response.ok) {
 			throw new Error('Network response was not ok');

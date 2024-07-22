@@ -1,16 +1,15 @@
-
 const adminSettings = {
 	workDayStart: '09:00',
 	workDayEnd: '18:00',
-	appointmentSlotSize: 30, // в минутах
+	appointmentSlotSize: 30, // slot duration in minutes
 	workDays: [
-		{ day: 'Понедельник', isWorking: true },
-		{ day: 'Вторник', isWorking: true },
-		{ day: 'Среда', isWorking: true },
-		{ day: 'Четверг', isWorking: true },
-		{ day: 'Пятница', isWorking: true },
-		{ day: 'Суббота', isWorking: false },
-		{ day: 'Воскресенье', isWorking: false }
+		{ day: 'Monday', isWorking: true },
+		{ day: 'Tuesday', isWorking: true },
+		{ day: 'Wednesday', isWorking: true },
+		{ day: 'Thursday', isWorking: true },
+		{ day: 'Friday', isWorking: true },
+		{ day: 'Saturday', isWorking: false },
+		{ day: 'Sunday', isWorking: false }
 	],
 	holidays: [
 		{ date: '2024-01-01', name: 'New Year' },
