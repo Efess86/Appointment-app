@@ -38,13 +38,15 @@ export const CREATE_CALENDAR = {
 	},
 	WORKING_DAYS: {
 		TITLE: 'Choose working days',
-		MONDAY: 'Monday',
-		TUESDAY: 'Tuesday',
-		WEDNESDAY: 'Wednesday',
-		THURSDAY: 'Thursday',
-		FRIDAY: 'Friday',
-		SATURDAY: 'Saturday',
-		SUNDAY: 'Sunday'
+		DAYS: {
+			MONDAY: 'Monday',
+			TUESDAY: 'Tuesday',
+			WEDNESDAY: 'Wednesday',
+			THURSDAY: 'Thursday',
+			FRIDAY: 'Friday',
+			SATURDAY: 'Saturday',
+			SUNDAY: 'Sunday'
+		}
 	},
 	HOLIDAYS: {
 		TITLE: 'Choose holidays',
