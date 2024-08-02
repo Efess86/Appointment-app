@@ -39,13 +39,13 @@ export const CREATE_CALENDAR = {
 	WORKING_DAYS: {
 		TITLE: 'Choose working days',
 		DAYS: {
-			MONDAY: 'Monday',
-			TUESDAY: 'Tuesday',
-			WEDNESDAY: 'Wednesday',
-			THURSDAY: 'Thursday',
-			FRIDAY: 'Friday',
-			SATURDAY: 'Saturday',
-			SUNDAY: 'Sunday'
+			MONDAY: 'Δευτέρα',
+			TUESDAY: 'Τρίτη',
+			WEDNESDAY: 'Τετάρτη',
+			THURSDAY: 'Πέμπτη',
+			FRIDAY: 'Παρασκευή',
+			SATURDAY: 'Σάββατο',
+			SUNDAY: 'Κυριακή'
 		}
 	},
 	HOLIDAYS: {
