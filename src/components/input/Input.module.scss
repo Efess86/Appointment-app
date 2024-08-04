@@ -1,0 +1,16 @@
+.inputContainer {
+	margin-bottom: 15px;
+}
+
+.label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.required::before {
+	content: '*';
+	color: red;
+	font-size: 20px;
+	margin-right: 4px;
+}

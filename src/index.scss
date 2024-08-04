@@ -1,0 +1,99 @@
+@import './reset-styles';
+
+$fontColor: #000000;
+$disableFontColor: #C2C2C2;
+
+$backColor: #D9D9D9;
+$disableBackColor: #F2F2F2;
+$cardBackColor: #FFFFFF;
+
+$buttonColor: #FFFFFF;
+$buttonBorderColor: #000000;
+
+$requiredColor: #ff0000;
+
+$elemsHeight: 44px;
+
+$borderRadius: 10px;
+$fontFamily: Roboto, Helvetica, sans-serif;
+
+body {
+  font-family: $fontFamily;
+  line-height: 1.5;
+  font-weight: 400;
+  color: $fontColor;
+  background-color: $backColor;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: $fontColor;
+  text-decoration: inherit;
+
+  &:hover {
+    color: darken($fontColor, 10%);
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: $borderRadius;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: $buttonColor;
+  cursor: pointer;
+  transition: all .3s;
+  height: $elemsHeight;
+
+  &:hover {
+    background-color: darken($buttonColor, 10%);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: $borderRadius;
+  font-size: 16px;
+  height: $elemsHeight;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, .25);
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: $fontColor;
+    background-color: $backColor;
+  }
+
+  button {
+    background-color: $buttonColor;
+  }
+}

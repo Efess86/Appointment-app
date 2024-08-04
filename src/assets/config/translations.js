@@ -1,8 +1,3 @@
-// ----------- Universal consts -----------
-export const CALENDAR_INPUT = 'dd/mm/yyyy';
-
-
-
 // ----------- Login page -----------
 export const LOGIN_PAGE = {
 	USERNAME: 'Username',
