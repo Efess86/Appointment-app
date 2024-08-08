@@ -10,13 +10,15 @@ const SUNDAY = CREATE_CALENDAR.WORKING_DAYS.DAYS.SUNDAY;
 
 
 export const LOGIN = {
-	USER_NAME: 'Root',
+	USER_NAME: 'root',
 	PASSWORD: 'root'
 }
 
-export const APPOINTMENT_DATA = {
-	SLOT_START: '10:00',
-	SLOT_END: '18:00',
+export const APPOINTMENT_CONFIG = {
+	DATE_START: '',
+	DATE_END: '',
+	SLOT_START: '',
+	SLOT_END: '',
 	SLOT_SIZE: 50,
 	BREAK_SIZE: 10,
 	WORK_DAYS: [
@@ -39,3 +41,36 @@ export const APPOINTMENT_DATA = {
 		{ DATE: '2024-07-09', NAME: 'Birthday', IS_WEEKEND: true },
 	]
 };
+
+// array that must be generated from admin data
+export const APPOINTMENT_DATA = {
+	NAME: '10:00 - 16:00 shift',
+	DATES: {
+		ITEM: {
+			DATE: '11/07/24',
+			DAY: WEDNESDAY,
+			IS_WEEKEND: false, // if not weekend generate slots
+			SLOTS: [
+				{ TIME: '10:00-11:00', IS_AVALIBLE: true },
+				{ TIME: '11:00-12:00', IS_AVALIBLE: true },
+				{ TIME: '12:00-13:00', IS_AVALIBLE: false },
+				{ TIME: '13:00-14:00', IS_AVALIBLE: true },
+				{ TIME: '14:00-15:00', IS_AVALIBLE: false },
+				{ TIME: '15:00-16:00', IS_AVALIBLE: true },
+			]
+		},
+		ITEM: {
+			DATE: '11/07/24',
+			DAY: WEDNESDAY,
+			IS_WEEKEND: true, // if weekend don't generate slots
+			SLOTS: []
+		},
+
+	}
+}
+
+export const USER_DATA = {
+	NAME: '',
+	EMAIL: '',
+	TEL: '',
+}
