@@ -3,10 +3,22 @@ import Input from './components/input/input'
 import Button from './components/button/button'
 import Checkbox from './components/input/checkbox';
 import { FaUser } from 'react-icons/fa';
+import { APPOINTMENT_DATA } from './utils/config';
+
+const getAllDateInfo = () => Object.entries(APPOINTMENT_DATA.DATES).map(([date, info]) => ({
+  date, ...info
+}));
+
+const time = document.getElementById('slot_start');
+console.log(time);
+
 
 function App() {
+  console.log(getAllDateInfo());
   return (
     <div className="App">
+
+
 
       {/* Text input */}
       <Input
@@ -28,9 +40,7 @@ function App() {
       <Input
         label="Slot start"
         id="slot_start"
-        type="number"
-        min={0}
-        max={60}
+        type="time"
       />
 
       <Checkbox
