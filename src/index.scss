@@ -3,6 +3,7 @@
 $fontColor: #000000;
 $disableFontColor: #C2C2C2;
 
+$bodyBackground: #b0dcfa;
 $backColor: #D9D9D9;
 $disableBackColor: #F2F2F2;
 $cardBackColor: #FFFFFF;
@@ -22,7 +23,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: $fontColor;
-  background-color: $backColor;
+  background-color: $bodyBackground;
   margin: 0;
   display: flex;
   place-items: center;
