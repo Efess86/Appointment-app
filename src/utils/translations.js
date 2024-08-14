@@ -18,9 +18,10 @@ export const CALENDAR_LIST = {
 
 // ----------- Create calendar window -----------
 export const CREATE_CALENDAR = {
+	CREATE_CALENDAR: "Δημιουργία ημερολογίου",
 	NAME: {
-		LABEL: 'Calendar name',											// defaul value "Calendar name"
-		PLACEHOLDER: 'Enter calendar name...'							// defaul value "Enter calendar name..."
+		LABEL: 'Όνομα ημερολογίου',										// defaul value "Calendar name"
+		PLACEHOLDER: 'Εισάγετε το όνομα του ημερολογίου...'			    // defaul value "Enter calendar name..."
 	},
 	DAYS_AND_SLOTS: {
 		TITLE: 'Choose start and end days, slot and break durations',	// defaul value "Choose start and end days, slot and break durations"
