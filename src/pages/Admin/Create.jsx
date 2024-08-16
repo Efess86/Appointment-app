@@ -28,7 +28,7 @@ function Create() {
 				required
 			/>
 
-			<hr className='hr' /> {/* NOT VISIBLE NEED FIX */}
+			<hr className='h-row' /> {/* NOT VISIBLE NEED FIX */}
 
 		</div>
 	);

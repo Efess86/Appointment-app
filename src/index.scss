@@ -49,10 +49,11 @@ h1 {
   line-height: 1.1;
 }
 
-.hr {
+.h-row {
+  border: none;
   height: 1px;
-  color: $buttonColor;
-  overflow: visible;
+  background-color: $buttonColor;
+  margin: 10px 0;
 }
 
 button {
