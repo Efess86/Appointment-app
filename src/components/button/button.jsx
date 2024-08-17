@@ -2,7 +2,7 @@ import React from "react";
 import styles from './Button.module.scss';
 
 const Button = ({ id, btn_name, icon, withBorder, ...props }) => {
-	const buttonStyles = {
+	const borderStyle = {
 		...(withBorder && { border: '1px solid black' })
 	};
 
@@ -10,7 +10,7 @@ const Button = ({ id, btn_name, icon, withBorder, ...props }) => {
 		<button
 			id={id}
 			className={styles.button}
-			style={buttonStyles}
+			style={borderStyle}
 			{...props}
 		>
 			{icon && <span className={styles.icon}>{icon}</span>}

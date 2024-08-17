@@ -7,18 +7,18 @@ export const LOGIN_PAGE = {
 
 // ----------- Calendar list window -----------
 export const CALENDAR_LIST = {
-	ADD_NEW_BUTTON: 'Add new calendar', // default value "Add new calendar"
+	ADD_NEW_BUTTON: 'Add new calendar', 								// default value "Add new calendar"
 	CARD: {
-		DATES: 'Dates',                 // default value "Dates"
-		SLOTS: 'Slots',                 // default value "Slots"
-		OPEN_BUTTON: 'Open',            // default value "Open"
-		DELETE_BUTTON: 'Delete',        // default value "Delete"
+		DATES: 'Dates',                 								// default value "Dates"
+		SLOTS: 'Slots',                 								// default value "Slots"
+		OPEN_BUTTON: 'Open',            								// default value "Open"
+		DELETE_BUTTON: 'Delete',        								// default value "Delete"
 	}
 }
 
 // ----------- Create calendar window -----------
 export const CREATE_CALENDAR = {
-	CREATE_CALENDAR: "Δημιουργία ημερολογίου",
+	TITLE: "Δημιουργία ημερολογίου",									// default value "Create calendar"
 	NAME: {
 		LABEL: 'Όνομα ημερολογίου',										// default value "Calendar name"
 		PLACEHOLDER: 'Εισάγετε το όνομα του ημερολογίου...'			    // default value "Enter calendar name..."
