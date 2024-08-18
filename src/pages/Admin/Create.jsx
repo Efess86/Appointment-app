@@ -4,6 +4,7 @@ import styles from './Create.module.scss';
 import { CREATE_CALENDAR } from '../../utils/translations'; // import translations file
 import Button from '../../components/button/button';
 import { FaUser } from 'react-icons/fa';
+import Checkbox from '../../components/input/checkbox';
 
 
 
@@ -15,17 +16,35 @@ function Create() {
 		calendarName: '',
 		startDate: '',
 		endDate: '',
-		slotDuration: '0',
-		startSlotTime: '0',
-		endSlotTime: '0',
-		breakDuration: '0',
+		slotDuration: '50',
+		breakDuration: '10',
+		startSlotTime: '00:00',
+		endSlotTime: '00:00',
 	});
+
+	const [checkedDays, setCheckedDays] = useState({
+		monday: true,
+		tuesday: true,
+		wednesday: true,
+		thursday: true,
+		friday: true,
+		saturday: false,
+		sunday: false,
+	});
+
 
 	const handleInputChange = (e) => {
 		const { id, value } = e.target;
 		setFormData(prevData => ({
 			...prevData,
 			[id]: value
+		}));
+	};
+
+	const handleDayChange = (day) => {
+		setCheckedDays(prevState => ({
+			...prevState,
+			[day]: !prevState[day]
 		}));
 	};
 
@@ -36,6 +55,7 @@ function Create() {
 				<h1>{CREATE_CALENDAR.TITLE}</h1>
 				<Input
 					className={styles.inputs}
+					style={{ width: '270px' }}
 					label={CREATE_CALENDAR.NAME.LABEL}
 					id="calendarName"
 					placeholder={CREATE_CALENDAR.NAME.PLACEHOLDER}
@@ -77,7 +97,6 @@ function Create() {
 				<div className={styles.durationContainer}>
 					<Input
 						className={styles.inputs}
-						style={{ width: '60px' }}
 						label={CREATE_CALENDAR.DAYS_AND_SLOTS.SLOT_DURATION}
 						id="slotDuration"
 						type='number'
@@ -90,7 +109,6 @@ function Create() {
 
 					<Input
 						className={styles.inputs}
-						style={{ width: '60px' }}
 						label={CREATE_CALENDAR.DAYS_AND_SLOTS.BREAK_DURATION}
 						id="breakDuration"
 						type='number'
@@ -123,6 +141,23 @@ function Create() {
 
 				</div>
 
+			</div>
+
+			<hr className='h-row' />
+
+			<div className={styles.calendarWeeksContainer}>
+				<h2>{CREATE_CALENDAR.WORKING_DAYS.TITLE}</h2>
+				<div className={styles.calendarWeeks}>
+					{Object.entries(CREATE_CALENDAR.WORKING_DAYS.DAYS).map(([day, label]) => (
+						<Checkbox
+							key={day}
+							label={label}
+							id={`${day}Checkbox`}
+							checked={checkedDays[day]}
+							onChange={() => handleDayChange(day)}
+						/>
+					))}
+				</div>
 			</div>
 
 			<hr className='h-row' />

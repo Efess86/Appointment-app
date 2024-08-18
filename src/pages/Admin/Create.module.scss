@@ -1,5 +1,7 @@
 .calendarTitle {
-	background-color: red;
+	h1 {
+		text-align: center;
+	}
 }
 
 .durationContainer {
@@ -10,6 +12,13 @@
 	gap: 15px;
 }
 
+.calendarDuration {
+	h2 {
+		text-align: center;
+	}
+}
+
+
 @media (max-width: 710px) {
 
 	.durationContainer {
@@ -17,8 +26,15 @@
 	}
 }
 
-.calendarDuration {
+.calendarWeeksContainer {
 	h2 {
 		text-align: center;
 	}
+}
+
+.calendarWeeks {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
 }
