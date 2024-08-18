@@ -3,7 +3,8 @@ import Input from '../../components/input/input';
 import styles from './Create.module.scss';
 import { CREATE_CALENDAR } from '../../utils/translations'; // import translations file
 import Button from '../../components/button/button';
-import { FaUser } from 'react-icons/fa';
+import { IoIosSave } from "react-icons/io";
+import { MdOutlineCancel } from "react-icons/md";
 import Checkbox from '../../components/input/checkbox';
 
 
@@ -165,8 +166,14 @@ function Create() {
 			<Button
 				id='saveBtnId'
 				btn_name='Save'
-				icon={<FaUser />}
-				withBorder={true}
+				icon={<IoIosSave />}
+				withBorder={false}
+			/>
+			<Button
+				id='closeBtnId'
+				btn_name='Close'
+				icon={<MdOutlineCancel />}
+				withBorder={false}
 			/>
 
 		</div>

@@ -4,10 +4,14 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-
+	gap: 10px;
 }
 
 .icon {
-	margin-right: 8px;
+	margin: 3px 0 0 0;
+
+	svg {
+		width: 18px;
+		height: 18px;
+	}
 }
