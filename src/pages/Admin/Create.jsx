@@ -56,7 +56,7 @@ function Create() {
 				<h1>{CREATE_CALENDAR.TITLE}</h1>
 				<Input
 					className={styles.inputs}
-					style={{ width: '270px' }}
+					style={{ width: '280px' }}
 					label={CREATE_CALENDAR.NAME.LABEL}
 					id="calendarName"
 					placeholder={CREATE_CALENDAR.NAME.PLACEHOLDER}
@@ -163,18 +163,20 @@ function Create() {
 
 			<hr className='h-row' />
 
-			<Button
-				id='saveBtnId'
-				btn_name='Save'
-				icon={<IoIosSave />}
-				withBorder={false}
-			/>
-			<Button
-				id='closeBtnId'
-				btn_name='Close'
-				icon={<MdOutlineCancel />}
-				withBorder={false}
-			/>
+			<div className={styles.calendarWeeks}>
+				<Button
+					id='saveBtnId'
+					btn_name='Save'
+					icon={<IoIosSave />}
+					withBorder={false}
+				/>
+				<Button
+					id='closeBtnId'
+					btn_name='Close'
+					icon={<MdOutlineCancel />}
+					withBorder={false}
+				/>
+			</div>
 
 		</div>
 	);
