@@ -60,7 +60,7 @@ export const CREATE_CALENDAR = {
 			X_MAS: "Christmas (December 25)"							// default value "Christmas (December 25)"
 		},
 		SAVE_BUTTON: 'Save',											// default value "Save"
-		CANCEL_BUTTON: 'Cancel',										// default value "Cancel"
+		CANCEL_BUTTON: 'Close',											// default value "Close"
 	}
 }
 // ----------- Admin calendar window -----------

@@ -1,7 +1,21 @@
 @import './reset-styles';
 
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('./assets/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('./assets/fonts/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 $fontColor: #404244;
-$disableFontColor: #C2C2C2;
+$disableFontColor: #C2C2C2; // color of non availible items
 
 $bodyBackground: #b0dcfa;
 $backColor: #D9D9D9;
@@ -11,17 +25,20 @@ $cardBackColor: #FFFFFF;
 $buttonColor: #FFFFFF;
 $buttonBorderColor: #000000;
 
-$requiredColor: #ff0000;
+$requiredColor: #ff0000; // required star color
 
-$elemsHeight: 44px;
+$elemsHeight: 44px; // buttons and inputs custom height
 
 $borderRadius: 10px;
-$fontFamily: Roboto, Helvetica, sans-serif;
+$fontRegular: RobotoRegular, Helvetica, sans-serif;
+$fontBold: RobotoBold, Helvetica, sans-serif;
+$fontSize: 18px;
 
 body {
-  font-family: $fontFamily;
+  font-family: $fontRegular;
   line-height: 1.5;
   font-weight: 400;
+  font-size: $fontSize;
   color: $fontColor;
   background-color: $bodyBackground;
   margin: 0;
@@ -45,30 +62,36 @@ a {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
-  margin: 15px 0;
+  margin: 25px 0;
 }
 
 h2 {
   font-size: 2em;
   line-height: 1.1;
-  margin: 15px 0;
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  margin: 10px 0;
 }
 
 .h-row {
   border: none;
   height: 1px;
   background-color: $buttonColor;
-  margin: 10px 0;
+  margin: 40px 0;
 }
 
 button {
   border-radius: $borderRadius;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
+  font-weight: 700;
+  font-family: $fontBold;
   background-color: $buttonColor;
   cursor: pointer;
   transition: all .3s;

@@ -1,9 +1,11 @@
 .button {
+	width: 240px;
 	padding: 10px 15px;
 	border: none;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	gap: 10px;
 }
 
