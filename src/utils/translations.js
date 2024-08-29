@@ -1,7 +1,9 @@
 // ----------- Login page -----------
 export const LOGIN_PAGE = {
 	USERNAME: 'Username',
+	LABEL_USERNAME: 'Enter your login...',
 	PASSWORD: 'Password',
+	LABEL_PASSWORD: 'Enter your password...',
 	BUTTON: 'Login',
 }
 
