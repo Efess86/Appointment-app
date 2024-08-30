@@ -10,7 +10,7 @@ function Login() {
 	return (
 		<div className={styles.loginContainer}>
 			<p>This app working with your browser's local storage.</p>
-			<p>For login enter Username: root and Password: root</p>
+			<p>For login enter Username: <span className="bold">root</span> and Password: <span className="bold">root</span></p>
 			<div>
 				<Input
 					type="text"
