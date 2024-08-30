@@ -10,8 +10,6 @@ import Checkbox from '../../components/input/checkbox';
 
 
 
-
-
 function Create() {
 
 	const [formData, setFormData] = useState({

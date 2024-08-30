@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Create from './pages/Admin/Create';
 import Login from './pages/User/Login';
+import Slot from './components/slot/slot';
 import './App.scss';
 
 
@@ -13,7 +14,8 @@ function App() {
     <div className="App">
 
       {/* <Create /> */}
-      <Login />
+      {/* <Login /> */}
+      <Slot />
     </div>
   )
 }

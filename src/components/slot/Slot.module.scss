@@ -1,0 +1,17 @@
+.slotContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 25px;
+}
+
+.slot {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+	width: 100px;
+	min-height: 100px;
+}
