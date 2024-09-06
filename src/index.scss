@@ -103,6 +103,12 @@ h3 {
   }
 }
 
+.slotAdminCard {
+  background-color: $cardBackColor;
+  border-radius: $borderRadius;
+  user-select: none;
+}
+
 .slotCardDisabled {
   background-color: $disableBackColor;
   color: $disableFontColor;

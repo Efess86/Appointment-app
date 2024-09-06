@@ -1,11 +1,35 @@
 import React from "react";
+import style from './Home.module.scss';
+import Slot from '../components/slot/slot';
 
 
 function Home() {
-
 	return (
 		<>
-			<h1>Home page</h1>
+			<div className={style.slotContainer}>
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+				<Slot />
+			</div>
 		</>
 	);
 };
