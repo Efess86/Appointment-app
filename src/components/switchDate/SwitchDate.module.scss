@@ -1,0 +1,18 @@
+.switchDateContainer {
+	display: flex;
+	width: 100%;
+	max-width: 300px;
+	gap: 5px;
+
+	input {
+		border: 1px solid grey;
+	}
+
+	button {
+		width: 70px;
+		border: 1px solid grey;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

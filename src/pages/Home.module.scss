@@ -1,3 +1,22 @@
+.container {
+	display: flex;
+	gap: 80px;
+	flex-direction: column;
+}
+
+.dateContainer {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	flex-wrap: wrap;
+
+	p {
+		background-color: #FFFFFF;
+		padding: 8px;
+		border-radius: 10px;
+	}
+}
+
 .slotContainer {
 	display: flex;
 	justify-content: center;
