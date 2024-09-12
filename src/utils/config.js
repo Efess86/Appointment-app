@@ -51,13 +51,42 @@ export const APPOINTMENT_DATA = {
 			DAY: WEDNESDAY,
 			IS_WORKDAY: true,
 			SLOTS: {
-				'10:00 - 11:00': { IS_AVALIBLE: true, USER_DATA: {} },
-				'12:00 - 13:00': { IS_AVALIBLE: false, USER_DATA: { NAME: 'Navrozidis Marios', EMAIL: 'navrozidis-marios@gmail.com', TEL: '+30 699 6548 458' } },
-				'13:00 - 14:00': { IS_AVALIBLE: true, USER_DATA: {} },
-				'14:00 - 15:00': { IS_AVALIBLE: false, USER_DATA: { NAME: 'Navrozidis Marios', EMAIL: 'navrozidis-marios@gmail.com', TEL: '+30 699 6548 458' } },
-				'15:00 - 16:00': { IS_AVALIBLE: true, USER_DATA: {} },
-				'16:00 - 17:00': { IS_AVALIBLE: true, USER_DATA: {} },
-				'17:00 - 18:00': { IS_AVALIBLE: true, USER_DATA: {} },
+				'10:00 - 11:00': { IS_AVALIBLE: true, CLIENT_DATA: {}, PENDING_REQUEST: null },
+				'12:00 - 13:00': {
+					IS_AVALIBLE: false,
+					CLIENT_DATA: {
+						NAME: 'Navrozidis Marios',
+						EMAIL: 'navrozidis-marios@gmail.com',
+						TEL: '+30 699 6548 458'
+					}
+				},
+				'13:00 - 14:00': {
+					IS_AVALIBLE: true,
+					CLIENT_DATA: {},
+					PENDING_REQUEST: [
+						{
+							NAME: 'Stergiou Dimitris',
+							EMAIL: 'stergiou@mail.com',
+							TEL: '+30 699 636 5488'
+						},
+						{
+							NAME: 'Mitsiou Aggeliki',
+							EMAIL: 'mitsiou@mail.com',
+							TEL: '+30 699 133 9482'
+						},
+					]
+				},
+				'14:00 - 15:00': {
+					IS_AVALIBLE: false,
+					CLIENT_DATA: {
+						NAME: 'Navrozidis Marios',
+						EMAIL: 'navrozidis-marios@gmail.com',
+						TEL: '+30 699 6548 458'
+					}
+				},
+				'15:00 - 16:00': { IS_AVALIBLE: true, CLIENT_DATA: {} },
+				'16:00 - 17:00': { IS_AVALIBLE: true, CLIENT_DATA: {} },
+				'17:00 - 18:00': { IS_AVALIBLE: true, CLIENT_DATA: {} },
 			}
 		},
 		'07/12/24': {
